@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/faster/static/css/main.105069c7.css",
+    "main.js": "/faster/static/js/main.3219e85e.js",
+    "index.html": "/faster/index.html",
+    "main.105069c7.css.map": "/faster/static/css/main.105069c7.css.map",
+    "main.3219e85e.js.map": "/faster/static/js/main.3219e85e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.105069c7.css",
+    "static/js/main.3219e85e.js"
+  ]
+}
