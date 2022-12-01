@@ -15,6 +15,7 @@ const Form = () => {
     const message = formRef.current.elements.message;
     const theme = formRef.current.elements.theme;
     const politics = formRef.current.elements.politics;
+    const file = formRef.current.elements.file;
 
     const deleteError = (el) => {
       el.classList.remove('error');
@@ -52,6 +53,7 @@ const Form = () => {
           message: message.value,
           theme: theme.value,
           politics: politics.checked,
+          file: file.files[0],
         };
         console.log(objInfo);
         formRef.current.reset();
@@ -64,8 +66,18 @@ const Form = () => {
     <div className="container form-page">
       <h2>Форма отправки</h2>
       <form className="form-page__form" ref={formRef}>
-        <input name="email" type="text" placeholder="email" />
-        <input name="name" type="text" placeholder="Имя" />
+        <input
+          className="input"
+          name="email"
+          type="text"
+          placeholder="email"
+        />
+        <input
+          className="input"
+          name="name"
+          type="text"
+          placeholder="Имя"
+        />
         <textarea name="message" placeholder="Сообщение"></textarea>
         <div className="form-page__checkbox">
           <label htmlFor="id_politics">
@@ -111,6 +123,10 @@ const Form = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="form-page__file">
+          <p>Выберите файлы:</p>
+          <input className="file-input" name="file" type="file" />
         </div>
         <button disabled={!isCheckedPolitics}>Отправить</button>
       </form>
