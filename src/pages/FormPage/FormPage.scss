@@ -1,0 +1,43 @@
+@import '../../assets/scss/variables';
+
+.form-page {
+  .error {
+    background-color: lighten(red, 45);
+    &::after {
+      content: 'Ошибка!';
+    }
+  }
+  h2 {
+    margin-bottom: 35px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    input, textarea {
+      border: 1px solid #444;
+      padding: 10px 14px;
+    }
+    input, textarea, button {
+      font-family: inherit;
+      font-size: 15px;
+      border-radius: 6px;
+    }
+    textarea {
+      resize: none;
+      height: 200px;
+    }
+    button {
+      border: none;
+      cursor: pointer;
+      padding: 15px 20px;
+      background-color: $blues;
+      color: #fff;
+      font-weight: 700;
+      transition: 0.15s ease-in;
+      &:hover {
+        background-color: darken($blues, 15);
+      }
+    }
+  }
+}
