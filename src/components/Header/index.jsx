@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux/es/exports';
 
 import HeaderSearch from './HeaderSearch';
 
+import logo from '../../assets/img/bikeLogo.jpg';
+
 const Header = () => {
   const cartInfo = useSelector((state) => state.cart);
 
@@ -16,7 +18,7 @@ const Header = () => {
       <div className="container">
         <Link to="/">
           <div className="header__logo">
-            <img width="38" src="img/bikeLogo.jpg" alt="bike logo" />
+            <img width="38" src={logo} alt="bike logo" />
             <div>
               <h1>React Bikes</h1>
               <p>самая качественная техника во вселенной</p>
